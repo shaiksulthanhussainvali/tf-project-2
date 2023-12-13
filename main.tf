@@ -203,8 +203,8 @@ resource "aws_lb_target_group" "my_target_group" {
 
 # Create Auto Scaling Group
 resource "aws_autoscaling_group" "my_auto_scaling_group" {
-  desired_capacity     = 3
-  max_size             = 3
+  desired_capacity     = 4
+  max_size             = 4
   min_size             = 1
   vpc_zone_identifier  = [aws_subnet.pub_sb.id]
   launch_configuration = aws_launch_configuration.my_launch_configuration.id
